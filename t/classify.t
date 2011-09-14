@@ -2,6 +2,9 @@ use Test::More;
 
 BEGIN { use_ok( 'Perl6::Classify' ); }
 
+# stolen from rakudo's test suite:
+# http://svn.pugscode.org/pugs/t/spec/S32-list/classify.t
+
 {
     my @list = (1, 2, 3, 4);
     my %results = Perl6::Classify::classify { $_ % 2 ? 'odd' : 'even' } @list;
